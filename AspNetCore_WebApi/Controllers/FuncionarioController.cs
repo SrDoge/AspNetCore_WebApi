@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ApnCore_CrudExemplo.Models;
+using AspNetCore_WebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +19,7 @@ namespace AspNetCore_WebApi.Controllers
         {
             _FuncionarioDAL = tarefaRepositorio;
         }
+
         [HttpGet]
         public IEnumerable<Funcionario> GetAllFuncionarios()
         {
@@ -32,6 +34,7 @@ namespace AspNetCore_WebApi.Controllers
             {
                 return NotFound();
             }
+
             return new ObjectResult(item);
         }
 
@@ -64,6 +67,7 @@ namespace AspNetCore_WebApi.Controllers
             funcionario.Cidade = item.Cidade;
             funcionario.Departamento = item.Departamento;
             funcionario.Sexo = item.Sexo;
+            funcionario.Salario = item.Salario;
 
             _FuncionarioDAL.UpdateFuncionario(funcionario);
             return new NoContentResult();

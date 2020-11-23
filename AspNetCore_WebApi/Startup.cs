@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ApnCore_CrudExemplo.Models;
 using AspNetCore_WebApi.Controllers;
+using AspNetCore_WebApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
